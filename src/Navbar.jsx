@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "./assests/logo.jpg";
+import logo from "./assets/logo.jpg";
 function Navbar() {
   return (
    <>
@@ -15,7 +15,7 @@ function Navbar() {
               <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
               <li className="nav-item"><a className="nav-link" href="#">Shop</a></li>
               <li className="nav-item"><a className="nav-link" href="#">About</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
+              <li className="nav-item"><a className="nav-link" href="contact">Contact</a></li>
               <li className="nav-item"><a className="nav-link" href="#">Journal</a></li>
             </ul>
           </div>
