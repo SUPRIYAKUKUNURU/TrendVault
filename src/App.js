@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import OffersPage from './OffersPage';
 
 import Search from './Search';
-// import Shop from './Shop';
+import Shop from './Shop';
 
 function App() {
   
@@ -15,7 +15,7 @@ function App() {
     <>
     <Navbar />
     <Search />
-    {/* <Shop />  */}
+    <Shop /> 
     <OffersPage />
     <Contact />
     <Journals />
