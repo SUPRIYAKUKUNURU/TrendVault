@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom"; // Use Link for navigation
 
 const Search = () => {
   return (
@@ -15,7 +16,9 @@ const Search = () => {
       {/* User and Cart Icons */}
       <div className="d-flex gap-4">
         <FontAwesomeIcon icon={faUser} size="lg" />
-        <FontAwesomeIcon icon={faShoppingCart} size="lg" />
+        <Link to="/cart" style={{ color: "black" }}>
+          <FontAwesomeIcon icon={faShoppingCart} size="lg" style={{ cursor: "pointer" }} />
+        </Link>
       </div>
     </div>
   );

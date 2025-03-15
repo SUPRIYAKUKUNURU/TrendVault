@@ -42,10 +42,10 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/journals">Journal</Link>
             </li>
-            <li className ="nav-item">
+            {/* <li className ="nav-item">
               <Link className="" to="/cart">Cart</Link>
 
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
