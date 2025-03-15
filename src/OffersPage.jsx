@@ -67,7 +67,7 @@ function OffersPage() {
             <button 
                 className="btn btn-dark position-absolute" 
                 style={{ top: "10px", left: "20px", zIndex: "10",marginTop:"10px" }}>
-                New
+                  <a href="/shop" style={{ color: "white", textDecoration: "none" }}>New</a>
               </button>
               <img src={item.img} alt={item.productName} className="card-img-top" style={{ height: "200px", width:"250px" }} />
               <div className="card-body">

@@ -38,7 +38,7 @@ function Contact() {
           <div style={{ marginLeft: "30px" }}>
             <h2><b>Contact</b></h2>
             <form onSubmit={handleSubmit}>
-              <a href="#" style={{ textDecoration: "none" }}>About</a>
+              <a href="/about" style={{ textDecoration: "none" }}>About</a>
               <h6>Contact</h6>
 
               <h2>Fill up a Form</h2>

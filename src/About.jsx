@@ -9,7 +9,7 @@ function About() {
           <div style={{ marginLeft: "30px" }}>
             <h2><b>About</b></h2>
             <form>
-              <a href="#" style={{ textDecoration: "none" }}>Shop</a>
+              <a href="/shop" style={{ textDecoration: "none" }}>Shop </a>
               <h6>About</h6>
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis aliquam fugit fuga asperiores quas earum quo magnam, voluptatum commodi consectetur vitae adipisci officiis doloremque quasi sit consequuntur! Et, tempore fugit.

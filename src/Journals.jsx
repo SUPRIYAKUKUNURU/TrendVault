@@ -9,7 +9,7 @@ function Journals() {
           <div style={{ marginLeft: "30px" }}>
             <h2><b>Journals</b></h2>
             <form>
-              <a href="#" style={{ textDecoration: "none" }}>Contact</a>
+              <a href="/contact" style={{ textDecoration: "none" }}>Contact</a>
               <h6>Journal</h6>
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis aliquam fugit fuga asperiores quas earum quo magnam, voluptatum commodi consectetur vitae adipisci officiis doloremque quasi sit consequuntur! Et, tempore fugit.
