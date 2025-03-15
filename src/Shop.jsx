@@ -438,6 +438,7 @@ const Shop = () => {
     },
   ];
     const [cart, setCart] = useState([]);
+    
 
     // Function to add product to cart
     const addToCart = (product) => {

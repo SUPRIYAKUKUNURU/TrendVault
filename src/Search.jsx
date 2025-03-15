@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; // Use Link for navigation
+import { Link } from "react-router-dom";
 
 const Search = () => {
+  
   return (
     <div className="container mt-3 d-flex justify-content-between align-items-center p-3" style={{ backgroundColor: "#EEEEEE" }}>
       {/* Search Bar */}
@@ -16,10 +17,11 @@ const Search = () => {
       {/* User and Cart Icons */}
       <div className="d-flex gap-4">
         <FontAwesomeIcon icon={faUser} size="lg" />
-        <Link to="/cart" style={{ color: "black" }}>
-          <FontAwesomeIcon icon={faShoppingCart} size="lg" style={{ cursor: "pointer" }} />
+        <Link style={{ color: "black" }} to="/cart">
+        <FontAwesomeIcon icon={faShoppingCart} size="lg" />
         </Link>
       </div>
+
     </div>
   );
 };

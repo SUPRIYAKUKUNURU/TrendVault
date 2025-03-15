@@ -70,17 +70,17 @@ const Cart = ({ setShowCart }) => {
           </tbody>
         </table>
       )}
-      <div className="text-center mt-3">
-  <a href="/shop">
-    <button className="btn btn-secondary">Back To Shop</button>
-  </a>
-  </div>
-
       {cart.length > 0 && (
         <h4 className="text-center mt-4">
           Grand Total: <span className="text-success">${grandTotal}</span>
         </h4>
       )}
+
+<div className="text-center mt-3">
+  <a href="/shop">
+    <button className="btn btn-secondary">Back To Shop</button>
+  </a>
+  </div>
     </div>
   );
 };
