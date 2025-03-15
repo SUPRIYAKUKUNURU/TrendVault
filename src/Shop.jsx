@@ -458,6 +458,7 @@ const Shop = () => {
                 <h5 className="card-title">{product.productName}</h5>
                 <p className="card-text">{product.color}</p>
                 <p className="card-text">${product.price}</p>
+                <button className="btn btn-dark">Shop Now</button>
               </div>
             </div>
           </div>
