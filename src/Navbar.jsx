@@ -1,14 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./Home";
-import Shop from "./Shop";
-import Contact from "./Contact";
-import About from "./About";
-import Journals from "./Journals"
+import { Link } from "react-router-dom";
 import logo from "./assets/logo.jpg";
-import Search from "./Search";
-import Cart from "./Cart"
 
 function Navbar() {
   return (
@@ -42,9 +34,8 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/journals">Journal</Link>
             </li>
-            {/* <li className ="nav-item">
-              <Link className="" to="/cart">Cart</Link>
-
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/cart">Cart</Link>
             </li> */}
           </ul>
         </div>
@@ -53,21 +44,4 @@ function Navbar() {
   );
 }
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Search />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/journals" element={<Journals />} />
-        <Route path="/cart" element={<Cart/>} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+export default Navbar;

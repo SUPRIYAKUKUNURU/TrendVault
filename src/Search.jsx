@@ -17,7 +17,7 @@ const Search = () => {
       {/* User and Cart Icons */}
       <div className="d-flex gap-4">
         <FontAwesomeIcon icon={faUser} size="lg" />
-        <Link style={{ color: "black" }} to="/cart">
+        <Link style={{color:"black"}} to="/cart">
         <FontAwesomeIcon icon={faShoppingCart} size="lg" />
         </Link>
       </div>

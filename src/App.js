@@ -1,30 +1,33 @@
-import About from './About';
-import Contact from './Contact';
-import Footer from './Footer';
-import Home from './Home';
-import Journals from './Journals';
-import Navbar from './Navbar';
-import OffersPage from './OffersPage';
-
-import Search from './Search';
-import Shop from './Shop';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Shop from "./Shop";
+import Contact from "./Contact";
+import About from "./About";
+import Journals from "./Journals";
+import OffersPage from "./OffersPage";
+import Search from "./Search";
+import Cart from "./Cart";
+import Footer from "./Footer";
 
 function App() {
-  
   return (
-    
-    <>
-    <Navbar />
-    {/* <Search /> */}
-    {/* <Home />
-    <Shop /> 
-    <OffersPage />
-    <Contact />
-    <Journals />
-    <About /> */}
-    <Footer />
-    
-    </>
+    <Router>
+      <Navbar />
+      <Search />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/journals" element={<Journals />} />
+        <Route path="/offers" element={<OffersPage />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
