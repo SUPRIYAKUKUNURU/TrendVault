@@ -8,6 +8,7 @@ import About from "./About";
 import Journals from "./Journals"
 import logo from "./assets/logo.jpg";
 import Search from "./Search";
+import Cart from "./Cart"
 
 function Navbar() {
   return (
@@ -41,6 +42,10 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/journals">Journal</Link>
             </li>
+            <li className ="nav-item">
+              <Link className="" to="/cart">Cart</Link>
+
+            </li>
           </ul>
         </div>
       </div>
@@ -59,6 +64,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/journals" element={<Journals />} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
     </Router>
   );
