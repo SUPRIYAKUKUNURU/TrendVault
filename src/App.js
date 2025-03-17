@@ -10,6 +10,7 @@ import Journals from "./Journals";
 import OffersPage from "./OffersPage";
 import Search from "./Search";
 import Cart from "./Cart";
+import ProductDetails from "./ProductDetails";
 import Footer from "./Footer";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/journals" element={<Journals />} />
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
       <Footer />
     </Router>
