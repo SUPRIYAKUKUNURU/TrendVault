@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Import Product Images
 import spfOne from "./assets/spfOne.webp";
 import spfTwo from "./assets/spfTwo.webp";
 import spfThree from "./assets/spfThree.webp";
@@ -14,10 +18,7 @@ import newArrTwo from "./assets/newArrTwo.webp";
 import newArrThree from "./assets/newArrThree.webp";
 import newArrFour from "./assets/newArrFour.webp";
 
-   
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-
+// Product Data
 const products =  [
  
   {
@@ -439,17 +440,45 @@ const products =  [
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [cart, setCart] = useState([]);
+
   const productsPerPage = 6;
   const totalPages = Math.ceil(products.length / productsPerPage);
 
+  // Pagination Logic
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
+  // Add to Cart Function
+  const addToCart = (product) => {
+    setCart((prevCart) => {
+      const existingItemIndex = prevCart.findIndex((item) => item._id === product._id);
+      let updatedCart;
+      
+      if (existingItemIndex !== -1) {
+        // If the item exists, increase its quantity
+        updatedCart = [...prevCart];
+        updatedCart[existingItemIndex].quantity += 1;
+      } else {
+        // If not, add a new item with quantity 1
+        updatedCart = [...prevCart, { ...product, quantity: 1 }];
+      }
+  
+      // Save to local storage
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+  
+      return updatedCart;
+    });
+  
+    alert(`${product.productName} added to cart!`);
+  };
   
   return (
     <div className="container">
       <h2 className="text-center my-4">Welcome to Our Shop</h2>
+
+      {/* Product Cards */}
       <div className="row">
         {currentProducts.map((product) => (
           <div key={product._id} className="col-md-4 mb-4">
@@ -458,25 +487,41 @@ const Shop = () => {
               <div className="card-body">
                 <h5 className="card-title">{product.productName}</h5>
                 <p className="card-text">Price: ${product.price}</p>
-                <Link to="/cart" className="btn btn-dark">Shop</Link>
+                <button 
+                  onClick={() => addToCart(product)}
+                  className="btn btn-dark"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         ))}
       </div>
+
       {/* Pagination */}
       <nav>
         <ul className="pagination justify-content-center">
           {[...Array(totalPages)].map((_, index) => (
             <li key={index} className={`page-item ${currentPage === index + 1 ? "active" : ""}`}>
-              <button onClick={() => setCurrentPage(index + 1)} className="page-link">
+              <button 
+                onClick={() => setCurrentPage(index + 1)} 
+                className="page-link"
+                disabled={currentPage === index + 1}
+              >
                 {index + 1}
               </button>
             </li>
           ))}
         </ul>
       </nav>
+
+      {/* Cart Link */}
+      <div className="text-center mt-4">
+        <Link to="/cart" className="btn btn-primary">Go to Cart ({cart.length})</Link>
+      </div>
     </div>
   );
 };
+
 export default Shop;
