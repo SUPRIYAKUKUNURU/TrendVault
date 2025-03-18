@@ -8,7 +8,7 @@ import Contact from "./Contact";
 import About from "./About";
 import Journals from "./Journals";
 import OffersPage from "./OffersPage";
-import Search from "./Search";
+// import Search from "./Search";
 import Cart from "./Cart";
 import ProductDetails from "./ProductDetails";
 import Footer from "./Footer";
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Search />
+      {/* <Search /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
