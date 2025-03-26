@@ -4,11 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 function About() {
   return (
     <div
-      className="container mt-4 mb-5 "
+      className="container mt-5 mb-5 "
       style={{
         backgroundColor: "#f8f9fa",
         border: "1px solid #EEEEEE",
-        borderRadius: "3px",
+        borderRadius: "2px",
         width: "600px",
       }}
     >
