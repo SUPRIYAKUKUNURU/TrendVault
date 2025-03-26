@@ -41,7 +41,7 @@ function About() {
                   backgroundColor: "black",
                   color: "white",
                   width: "150px",
-                  borderRadius: "3px",
+                  borderRadius: "2px",
                 }}
               >
                 Continue Shopping
