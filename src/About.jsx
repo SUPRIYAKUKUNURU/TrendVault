@@ -36,7 +36,7 @@ function About() {
               </p>
 
              <a href="/shop" ><button
-                className="btn btn-dark w-100 mt-2"
+                className="btn btn-dark w-100 mt-3"
                 style={{
                   backgroundColor: "black",
                   color: "white",
