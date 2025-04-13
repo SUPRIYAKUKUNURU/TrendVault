@@ -7,7 +7,7 @@ function About() {
       className="container mt-5 mb-5 "
       style={{
         backgroundColor: "#f8f9fa",
-        border: "1px solid #EEEEEE",
+        border: "2px solid #EEEEEE",
         borderRadius: "2px",
         width: "600px",
       }}
